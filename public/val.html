@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Upload</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+        body{
+            align-items: center;
+            background:url('images/3648396.jpg');
+            /* background-repeat: no-repeat;  */
+            background-size: cover;
+            overflow: hidden;
+        }
+        .login-form {
+			width: 300px;
+			margin: 0 auto;
+			font-family: Tahoma, Geneva, sans-serif;
+		}
+		.login-form h1 {
+			text-align: center;
+			color: #4d4d4d;
+			font-size: 24px;
+			padding: 20px 0 20px 0;
+		}
+		.login-form input[type="number"],
+		.login-form input[type="text"] {
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #dddddd;
+			margin-bottom: 15px;
+			box-sizing:border-box;
+		}
+		.login-form input[type="submit"],
+        .login-form input[type="file"]{
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+		}
+    </style>
+</head>
+<body>
+    <div>
+        <div class="space" >
+
+        </div>
+        <div class="space" >
+
+        </div>
+    <form class="login-form" action="/valid" method="post" enctype="multipart/form-data">
+        <br>
+        <div class="login-form">
+            <div class="login-form">
+                <h3 style="color: #ffffff; font-family: algerian; padding-top: 350px;">Upload Suspicious File:</h3>
+                <input type="file" class="form-control" name="avatar" id="usr">
+            </div>
+            <div class="login-form">
+                <input type="submit" class="btn btn-primary" value="Upload" id="submit">
+            </div>
+        </div>
+       
+        
+    </form>
+    <!-- <div class="login-form">
+        <div class="login-form">
+            <input type="text"  class="form-control" id="filehash">
+        </div> 
+        <div class="login-form">
+            <button onclick="loadDoc()" class="btn btn-success" value="Upload" id="submit">click here for validation</button>
+        </div>
+    </div> -->
+    </div>
+
+
+
+</body>
+    <!-- <script>
+        function loadDoc() {
+            // var xhttp = new XMLHttpRequest();
+            // xhttp.onreadystatechange = function() {
+            //     if (this.readyState == 4 && this.status == 200) {
+            //     // document.getElementById("demo").innerHTML = this.responseText;
+            //     console.log(this);
+            //     window.open(this.responseURL);
+            //     }
+            // };
+            // console.log(document.getElementById("filehash").value)
+            // xhttp.open("GET", "download/"+document.getElementById("filehash").value, true);
+            // xhttp.send();
+            window.location.href='val.html';
+        }
+    </script> -->
+</html>

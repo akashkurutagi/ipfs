@@ -1,0 +1,67 @@
+#include<stdio.h>
+#include<conio.h>
+void read_arr(int a[10][10],int row,int col)
+{
+    int i,j;
+    for(i=0;i<row;i++)
+    {
+    for(j=0;j<col;j++)
+    {
+       // printf("Enter Element %d %d : ",i,j);
+        scanf("%d",&a[i][j]);
+         }
+    }
+
+}
+int sum_row1(int a[10][10],int col,int i)
+{       int sum=0,j;
+        for(j=0;j<col;j++)
+        {
+            sum=sum+a[i][j];
+            printf("Result--------%d ",sum);
+        }
+    return sum;
+
+}
+int sum_row(int a[10][10],int col,int i,int j)
+{
+
+         if(j>=col)
+         {
+            return 0;
+         }
+        //printf("'---- %d\n'",a[i][j]);
+        return (a[i][j]+sum_row(a,col,i,j+1));
+}
+
+void print_arr(int a[10][10],int row,int col)
+{
+    int i,j;
+    printf("given matrix:\n");
+    for(i=0;i<row;i++)
+        {
+        for(j=0;j<col;j++)
+        {
+            printf("%d ",a[i][j]);
+         }
+        printf("\n");
+        }
+
+}
+int main()
+{
+    int a[10][10],row,col,i,j=0,sum;
+    printf("Enter number of rows :");
+    scanf("%d",&row);
+    printf("Enter number of colomns :");
+    scanf("%d",&col);
+    read_arr(a,row,col);
+    print_arr(a,row,col);
+    printf("Enter row number to make sum");
+    scanf("%d",&i);
+    sum=sum_row(a,col,i,j);
+     printf("Sum of array elements: %d",sum);
+
+    return 0;
+
+}

@@ -1,0 +1,33 @@
+from sklearn.naive_bayes import MultinomialNB  # Naive Bayes Classifier
+
+clf1= MultinomialNB()
+
+from sklearn.pipeline import Pipeline
+
+
+from sklearn.linear_model import LogisticRegression
+clf2 = LogisticRegression()
+
+model = Pipeline([
+    ('vect', CountVectorizer()),
+    ('clf', clf2),
+])
+
+model2 = Pipeline([
+    ('vect', CountVectorizer()),
+    ('clf', clf1),
+])
+
+model.fit(X_train, y_train)
+
+model2.fit(X_train, y_train)
+
+
+predictions2 = model2.predict(X_test)
+
+
+predictions = model.predict(X_test)
+
+result = model.predict(example)
+result=int(result)
+print(result)
