@@ -5,49 +5,37 @@ app.use(express.static(__dirname+'/public'));
 const fs =require('fs');
 const Web3 = require('web3');
 var web3 = new Web3('http://localhost:8545')
-var abi = [
-	{
-		"inputs": [],
-		"name": "hash",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "retrieve",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "hash1",
-				"type": "string"
-			}
-		],
-		"name": "store",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	}
-]
-var sendaddr = "0xa51d4acdb1368cd6043d174fcf7bd32efc36bb96";
-var cont_addr = '0xb811f85f7aFd85F851299EB39754a6aD0a2144c4';
+var abi =
+	[
+        {
+            "inputs": [],
+            "name": "retrieve",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "hash1",
+                    "type": "string"
+                }
+            ],
+            "name": "store",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ]
+var sendaddr = "0x084ccd122a045fc05f1b0a8ea24af23ed3aac7d0";
+var cont_addr = '0x6d3894970e54Ddb08a003748d38df9F5559749AD';
 var MyContract = new web3.eth.Contract(abi, cont_addr);
 var hash2;
 var hash7;
